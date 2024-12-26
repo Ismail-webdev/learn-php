@@ -48,7 +48,7 @@ echo $firstName . " " . $lastName; // Outputs: John Doe
 
 # String Interpolation
 
-String interpolation only works with double quotes:
+String interpolation is a feature in PHP that allows you to insert (or interpolate) the value of a variable directly into a string, making it easier to write and read dynamic strings. This only works when the string is enclosed in double quotes (""), not single quotes ('').
 
 ```php
 <?php
