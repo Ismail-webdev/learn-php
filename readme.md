@@ -6,6 +6,7 @@
 2. [Variables in PHP](#variables-in-php)
 3. [Concatenation in PHP](#concatenation-in-php)
 4. [String Interpolation](#string-interpolation)
+5. [Data Types](#data-types)
 
 ---
 
@@ -58,7 +59,7 @@ echo 'I love $language';  // Outputs: I love $language
 ?>
 ```
 
-# Data Types in PHP
+# Data Types
 
 PHP supports a variety of data types to help developers handle different kinds of information effectively. Understanding these data types is crucial for building robust and efficient PHP applications.
 
