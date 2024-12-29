@@ -169,3 +169,52 @@ Example of casting:
 ```php
 $number = (int) "42";
 ```
+
+# Control Structures
+
+They are used to control the flow of the Program
+
+1. Conditional Statements
+
+a. if Statement
+
+Executes code if a condition is true.
+
+Example:
+
+```php
+if ($age > 18) {
+echo "You are an adult.";
+}
+
+```
+
+b. if-else Statement
+
+Executes one block of code if the condition is true, another if it is false.
+
+Example:
+
+```php
+if ($age > 18) {
+echo "You are an adult.";
+} else {
+echo "You are a minor.";
+}
+```
+
+c. elseif Statement
+
+Allows multiple conditions to be tested.
+
+Example:
+
+```php
+if ($score > 90) {
+    echo "A grade";
+} elseif ($score > 75) {
+echo "B grade";
+} else {
+echo "C grade";
+}
+```
