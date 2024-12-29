@@ -7,6 +7,7 @@
 3. [Concatenation in PHP](#concatenation-in-php)
 4. [String Interpolation](#string-interpolation)
 5. [Data Types](#data-types)
+6. [Control Structures](#control-structures)
 
 ---
 
@@ -174,9 +175,9 @@ $number = (int) "42";
 
 They are used to control the flow of the Program
 
-1. Conditional Statements
+## Conditional Statements
 
-a. if Statement
+### if Statement
 
 Executes code if a condition is true.
 
@@ -189,7 +190,7 @@ echo "You are an adult.";
 
 ```
 
-b. if-else Statement
+### if-else Statement
 
 Executes one block of code if the condition is true, another if it is false.
 
@@ -203,7 +204,7 @@ echo "You are a minor.";
 }
 ```
 
-c. elseif Statement
+### elseif Statement
 
 Allows multiple conditions to be tested.
 

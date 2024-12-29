@@ -39,6 +39,15 @@
       }else{
         echo "Non-positive Number";
       }
+      $user = "admin";
+      $password = "XXXXXXXX";
+
+      if ($user == "admin" && $password == "XXXXXXXX") {
+        echo "Success";
+      }
+      else{
+        echo "Failure";
+      }
       ?>
     </h1>
   </body>
