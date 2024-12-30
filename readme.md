@@ -8,6 +8,7 @@
 4. [String Interpolation](#string-interpolation)
 5. [Data Types](#data-types)
 6. [Control Structures](#control-structures)
+7. [User Input](#user-input)
 
 ---
 
@@ -234,4 +235,26 @@ while ($i <= 5) {
     echo $i;
     $i++;
 }
+```
+
+## User Input
+
+### fgets(STDIN)
+
+The fgets(STDIN) function is used to read a line of input from the standard input (usually the console or terminal)
+
+```php
+<?php
+// Prompting user for input
+echo "Enter your name: ";
+
+// Reading input from the user
+$name = fgets(STDIN);
+
+// Removing any trailing newline or extra spaces
+$name = trim($name);
+
+echo "Hello, $name!";
+?>
+
 ```
