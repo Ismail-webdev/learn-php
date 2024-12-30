@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>
-      <?php
+<?php
      // $greeting = "Hello";
       //echo $greeting." "."Word";  // for contact in php use .
      // echo "$greeting EveryBody"; // if you want to nest and evaluate a variable within a string you have to use double quotes. otherwise u got '$greeting EveryBody'
@@ -22,18 +13,18 @@
       $age = 16;
 
       if ($age > 18) {
-       echo "You're above 18"."<br/>";
+       echo "You're above 18\n";
       }else{
-        echo "You're below 18"."<br/>";
+        echo "You're below 18\n";
       }
 
       $num = 15;
 
       if ($num > 0) {
         if ($num % 2 == 0) {
-        echo "Positive Even Number"."<br/>";
+        echo "Positive Even Number\n";
         }else{
-          echo "Positive Odd Number"."<br/>";
+          echo "Positive Odd Number\n";
         }
 
       }else{
@@ -48,7 +39,5 @@
       else{
         echo "Failure";
       }
-      ?>
-    </h1>
-  </body>
-</html>
+?>
+
