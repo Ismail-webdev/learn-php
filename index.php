@@ -39,5 +39,15 @@
       else{
         echo "Failure";
       }
+
+$name = readline("What's your name");
+echo $name;
+
+
+if ($name == "admin" && $name == "user") {
+echo "Successful";
+}   else{
+  echo "Not Eligible";
+}
 ?>
 

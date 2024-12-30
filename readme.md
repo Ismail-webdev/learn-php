@@ -219,3 +219,19 @@ echo "B grade";
 echo "C grade";
 }
 ```
+
+## Looping Statements
+
+### while Loop
+
+Executes a block of code as long as the condition is true.
+
+Example:
+
+```php
+$i = 1;
+while ($i <= 5) {
+    echo $i;
+    $i++;
+}
+```
