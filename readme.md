@@ -237,6 +237,18 @@ while ($i <= 5) {
 }
 ```
 
+### For Loop
+
+Executes a block of code a specific number of times.
+
+Example:
+
+```php
+for ($i = 1; $i <= 5; $i++) {
+    echo $i;
+}
+```
+
 ## User Input
 
 ### fgets(STDIN)
