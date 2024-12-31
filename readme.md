@@ -223,7 +223,7 @@ echo "C grade";
 
 ## Looping Statements
 
-### while Loop
+### While Loop
 
 Executes a block of code as long as the condition is true.
 
