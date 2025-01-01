@@ -249,6 +249,18 @@ for ($i = 1; $i <= 5; $i++) {
 }
 ```
 
+### Do-while Loop
+
+Executes a block of code at least once, then repeats as long as the condition is true.
+
+``php
+$i = 1;
+do {
+    echo $i;
+    $i++;
+} while ($i <= 5);
+
+````
 ## User Input
 
 ### fgets(STDIN)
@@ -269,4 +281,4 @@ $name = trim($name);
 echo "Hello, $name!";
 ?>
 
-```
+````
