@@ -9,7 +9,7 @@
 5. [Data Types](#data-types)
 6. [Control Structures](#control-structures)
 7. [User Input](#user-input)
-
+8. [Arrays](#arrays)
 ---
 
 # Introduction to PHP
@@ -117,19 +117,6 @@ Example:
 
 ```php
 $fruits = ["Apple", "Banana", "Cherry"];
-```
-
-#### Associative Array 
-
-An associative array in PHP is a type of array that uses named keys (rather than numeric indices) to store and access values. These are particularly useful when you want to store data in key-value pairs, making it easier to work with structured data.
-
-```php
-$student = [
-    "name" => "John Doe",
-    "age" => 20,
-    "major" => "Computer Science"
-];
-echo $student["name"]; // Output: John Doe
 ```
 
 ### Object
@@ -301,4 +288,27 @@ $name = trim($name);
 
 echo "Hello, $name!";
 ?>
+```
+
+## Arrays
+
+### Indexed Array
+An indexed array in PHP is a type of array where values are stored using numerical indices (starting from 0 by default). These arrays are ideal for storing a collection of similar data where the order matters and keys are not required.
+
+```php
+$fruits = ["Apple", "Banana", "Cherry"];
+echo $fruits[0]; // Output: Apple
+```
+
+### Associative Array 
+
+An associative array in PHP is a type of array that uses named keys (rather than numeric indices) to store and access values. These are particularly useful when you want to store data in key-value pairs, making it easier to work with structured data.
+
+```php
+$student = [
+    "name" => "John Doe",
+    "age" => 20,
+    "major" => "Computer Science"
+];
+echo $student["name"]; // Output: John Doe
 ```
