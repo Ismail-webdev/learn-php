@@ -262,11 +262,38 @@ do {
 ```
 
 ### Foreach Loop
+
 Iterates over each element in an array.
+
 ```php
 $fruits = ["Apple", "Banana", "Cherry"];
 foreach ($fruits as $fruit) {
     echo $fruit;
+}
+```
+## Break and Continue
+
+### break
+Exits the current loop or switch.
+
+```php
+for ($i = 1; $i <= 5; $i++) {
+    if ($i == 3) {
+        break;
+    }
+    echo $i;
+}
+```
+
+### continue
+Skips the current iteration of a loop and moves to the next.
+
+```php
+for ($i = 1; $i <= 5; $i++) {
+    if ($i == 3) {
+        continue;
+    }
+    echo $i;
 }
 ```
 ## User Input
