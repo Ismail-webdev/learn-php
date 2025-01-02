@@ -220,7 +220,41 @@ echo "B grade";
 echo "C grade";
 }
 ```
+### switch Statement
 
+Selects one block of code to execute from many options.
+
+Example:
+```php
+$day = "Monday";
+switch ($day) {
+    case "Monday":
+        echo "Start of the work week.";
+        break;
+    case "Friday":
+        echo "End of the work week.";
+        break;
+    default:
+        echo "Midweek days.";
+}
+```
+
+### match Statement
+
+Introduced in PHP 8.0, match is a more powerful and concise alternative to switch. It uses strict comparisons (===), returns values directly, and does not require break statements.
+
+```php
+$status = 200;
+
+$message = match ($status) {
+    200 => 'OK',
+    404 => 'Not Found',
+    500 => 'Internal Server Error',
+    default => 'Unknown Status',
+};
+
+echo $message; // Output: OK
+```
 ## Looping Statements
 
 ### While Loop
