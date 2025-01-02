@@ -259,8 +259,7 @@ do {
     echo $i;
     $i++;
 } while ($i <= 5);
-
-````
+```
 ## User Input
 
 ### fgets(STDIN)
@@ -274,7 +273,7 @@ echo "Enter your name: ";
 
 // Reading input from the user
 $name = fgets(STDIN);
-
+```
 // Removing any trailing newline or extra spaces
 $name = trim($name);
 
