@@ -119,6 +119,19 @@ Example:
 $fruits = ["Apple", "Banana", "Cherry"];
 ```
 
+#### Associative Array 
+
+An associative array in PHP is a type of array that uses named keys (rather than numeric indices) to store and access values. These are particularly useful when you want to store data in key-value pairs, making it easier to work with structured data.
+
+```php
+$student = [
+    "name" => "John Doe",
+    "age" => 20,
+    "major" => "Computer Science"
+];
+echo $student["name"]; // Output: John Doe
+```
+
 ### Object
 
 Represents instances of classes containing both data and methods.
@@ -259,6 +272,15 @@ do {
     echo $i;
     $i++;
 } while ($i <= 5);
+```
+
+### Foreach Loop
+Iterates over each element in an array.
+```php
+$fruits = ["Apple", "Banana", "Cherry"];
+foreach ($fruits as $fruit) {
+    echo $fruit;
+}
 ```
 ## User Input
 
