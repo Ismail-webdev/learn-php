@@ -266,7 +266,7 @@ for ($i = 1; $i <= 5; $i++) {
 
 Executes a block of code at least once, then repeats as long as the condition is true.
 
-``php
+```php
 $i = 1;
 do {
     echo $i;
