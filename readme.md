@@ -273,11 +273,10 @@ echo "Enter your name: ";
 
 // Reading input from the user
 $name = fgets(STDIN);
-```
+
 // Removing any trailing newline or extra spaces
 $name = trim($name);
 
 echo "Hello, $name!";
 ?>
-
-````
+```
