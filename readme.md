@@ -373,3 +373,64 @@ $student = [
 ];
 echo $student["name"]; // Output: John Doe
 ```
+
+# Include/Require
+
+In PHP, require and include are used to include files into your PHP scripts. They allow you to reuse code, such as headers, footers, database connections, or shared functions, across multiple files. Here's a detailed explanation of both:
+
+
+---
+
+## include
+
+The include statement includes and evaluates the specified file. If the file is not found, it throws a warning but the script continues to execute.
+
+Syntax:
+```php
+include 'filename.php';
+```
+Use Cases:
+
+Ideal when the file being included is optional.
+
+Use when the rest of the script can work even if the file is missing.
+
+
+Behavior:
+
+Generates a warning (E_WARNING) if the file is missing but does not stop the script execution.
+
+Example:
+
+```php
+include 'header.php'; // Includes the header file
+echo "Welcome to my website!"; // This will still execute even if header.php is missing.
+```
+
+---
+
+## require
+
+The require statement includes and evaluates the specified file. If the file is not found, it throws a fatal error and stops the script execution.
+
+Syntax:
+```php
+require 'filename.php';
+```
+
+Use Cases:
+
+Ideal when the file being included is critical for the application to function.
+
+Use when the script cannot continue without the file.
+
+
+Behavior:
+
+Generates a fatal error (E_COMPILE_ERROR) if the file is missing, halting script execution.
+
+Example:
+```php
+require 'config.php'; // Includes the configuration file
+echo "This will not execute if config.php is missing.";
+```
