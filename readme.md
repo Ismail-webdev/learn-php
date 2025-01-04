@@ -10,6 +10,8 @@
 6. [Control Structures](#control-structures)
 7. [User Input](#user-input)
 8. [Arrays](#arrays)
+9.  [Include/Require](#include/require)
+10.  [Functions](#functions)
 ---
 
 # Introduction to PHP
