@@ -537,7 +537,7 @@ Variadic functions in PHP allow a function to accept a variable number of argume
 ----
 - ### How Variadic Functions Work:
   
-####  The ... Operator:
+####  The ```...``` Operator:
   It collects multiple arguments passed to a function into an array.
   
   ##### Syntax:
@@ -582,7 +582,7 @@ greet('Hello', 'John', 'Jane', 'Doe');
 
 ```
 ### Unpacking Arguments into Variadic Functions:
-The ... operator can also unpack an array into separate arguments when calling a variadic function.
+The ```...``` operator can also unpack an array into separate arguments when calling a variadic function.
 
 ```php
 function displayNames(...$names) {
