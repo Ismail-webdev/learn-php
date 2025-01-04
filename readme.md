@@ -523,7 +523,8 @@ echo multiply(3, "4"); // Error in strict mode
 ```
 - ### Notes
   Strict mode applies only to function/method arguments and return types. Operations like arithmetic or comparisons are not affected by strict mode:
-  ```php
+
+   ```php
 <?php
 declare(strict_types=1);
 
