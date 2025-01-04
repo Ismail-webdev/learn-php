@@ -564,3 +564,20 @@ function sum(...$numbers) {
 
 echo sum(1, 2, 3, 4); // Output: 10
 ```
+### Usage with Other Parameters:
+You can mix variadic arguments with regular parameters, but the variadic parameter must always come last.
+
+```php
+function greet($greeting, ...$names) {
+    foreach ($names as $name) {
+        echo "$greeting, $name!\n" ;
+    }
+}
+
+greet('Hello', 'John', 'Jane', 'Doe');
+// Output:
+// Hello, John!
+// Hello, Jane!
+// Hello, Doe!
+
+```
