@@ -581,3 +581,21 @@ greet('Hello', 'John', 'Jane', 'Doe');
 // Hello, Doe!
 
 ```
+### Unpacking Arguments into Variadic Functions:
+The ... operator can also unpack an array into separate arguments when calling a variadic function.
+
+```php
+function displayNames(...$names) {
+    foreach ($names as $name) {
+        echo $name."\n";
+    }
+}
+
+$namesArray = ['Alice', 'Bob', 'Charlie'];
+displayNames(...$namesArray);
+// Output:
+// Alice
+// Bob
+// Charlie
+
+```
