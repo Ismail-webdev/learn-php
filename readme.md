@@ -434,3 +434,88 @@ Example:
 require 'config.php'; // Includes the configuration file
 echo "This will not execute if config.php is missing.";
 ```
+# Functions
+
+Functions are blocks of reusable code that perform specific tasks. PHP functions can accept parameters and return values. They can be classified into built-in functions and user-defined functions.
+
+## Syntax of Functions:
+
+### Defining a Function:
+```php
+function greet($name) {
+    return "Howdy, $name!\n";
+}
+```
+### Calling a Function:
+```php
+echo greet("Robert");
+```
+
+## Types of Functions:
+
+### Built-in Functions
+PHP provides a wide range of built-in functions, such as:
+```php
+strlen(): Get the length of a string.
+array_merge(): Merge arrays.
+date(): Get the current date/time.
+```
+
+###  User-Defined Functions
+These are custom functions created by developers to perform specific tasks.
+```php
+function greet($name) {
+    return "Hello, $name!";
+}
+
+echo greet("John"); // Output: Hello, John!
+```
+
+## Function Parameters
+
+###  Default Parameters
+Functions can have default values for parameters.
+```
+function greet($name = "Guest") {
+    return "Hello, $name!";
+}
+
+echo greet(); // Output: Hello, Guest!
+```
+
+## Return Types and Type Declarations
+
+PHP allows specifying the types of function parameters and return values to ensure type safety.
+
+### Parameter Type Declarations:
+```php
+function add(int $a, int $b): int {
+    return $a + $b;
+}
+
+echo add(2, 3); // Output: 5
+```
+
+### Return Type Declaration:
+
+```php
+function getGreeting(): string {
+    return "Hello, World!";
+}
+
+echo getGreeting(); // Output: Hello, World!
+```
+
+## Strict Mode
+
+Enforce strict type checking by declaring strict types at the top of the file.
+
+```php
+declare(strict_types=1);
+
+function multiply(int $a, int $b): int {
+    return $a * $b;
+}
+
+echo multiply(3, "4"); // Error in strict mode
+```
