@@ -376,14 +376,14 @@ $student = [
 echo $student["name"]; // Output: John Doe
 ```
 
-# Include/Require
+## Include/Require
 
 In PHP, require and include are used to include files into your PHP scripts. They allow you to reuse code, such as headers, footers, database connections, or shared functions, across multiple files. Here's a detailed explanation of both:
 
 
 ---
 
-- ## include
+- ### include
 
 The include statement includes and evaluates the specified file. If the file is not found, it throws a warning but the script continues to execute.
 
@@ -411,7 +411,7 @@ echo "Welcome to my website!"; // This will still execute even if header.php is 
 
 ---
 
-- ## require
+- ### require
 
 The require statement includes and evaluates the specified file. If the file is not found, it throws a fatal error and stops the script execution.
 
