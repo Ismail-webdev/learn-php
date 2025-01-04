@@ -69,7 +69,7 @@ PHP supports a variety of data types to help developers handle different kinds o
 
 ## Scalar Data Types
 
-### Integer
+- ### Integer
 
 Represents whole numbers (e.g., 42, -10).
 
@@ -79,7 +79,7 @@ Example:
 $age = 25;
 ```
 
-### Float (Double)
+- ### Float (Double)
 
 Represents decimal numbers (e.g., 3.14, -2.5).
 
@@ -89,7 +89,7 @@ Example:
 $price = 99.99;
 ```
 
-### String
+- ### String
 
 Represents a sequence of characters (e.g., "Hello World").
 
@@ -99,7 +99,7 @@ Example:
 $greeting = "Hello, PHP!";
 ```
 
-### Boolean
+- ### Boolean
 
 Represents two possible states: true or false.
 
@@ -121,7 +121,7 @@ Example:
 $fruits = ["Apple", "Banana", "Cherry"];
 ```
 
-### Object
+- ### Object
 
 Represents instances of classes containing both data and methods.
 
@@ -144,7 +144,7 @@ $myCar = new Car("Toyota", "Corolla");
 
 ## Special Data Types
 
-### NULL
+- ### NULL
 
 Represents a variable with no value.
 
@@ -154,7 +154,7 @@ Example:
 $value = null;
 ```
 
-### Resource
+- ### Resource
 
 Represents external resources like database connections or file handles.
 
@@ -164,7 +164,7 @@ Example:
 $file = fopen("example.txt", "r");
 ```
 
-### Type Juggling and Casting
+## Type Juggling and Casting
 
 PHP dynamically converts between data types as needed, but you can also explicitly cast types.
 
@@ -180,7 +180,7 @@ They are used to control the flow of the Program
 
 ## Conditional Statements
 
-### if Statement
+- ### if Statement
 
 Executes code if a condition is true.
 
@@ -193,7 +193,7 @@ echo "You are an adult.";
 
 ```
 
-### if-else Statement
+- ### if-else Statement
 
 Executes one block of code if the condition is true, another if it is false.
 
@@ -207,7 +207,7 @@ echo "You are a minor.";
 }
 ```
 
-### elseif Statement
+- ### elseif Statement
 
 Allows multiple conditions to be tested.
 
@@ -222,7 +222,7 @@ echo "B grade";
 echo "C grade";
 }
 ```
-### switch Statement
+- ### switch Statement
 
 Selects one block of code to execute from many options.
 
@@ -241,7 +241,7 @@ switch ($day) {
 }
 ```
 
-### match Statement
+- ### match Statement
 
 Introduced in PHP 8.0, match is a more powerful and concise alternative to switch. It uses strict comparisons (===), returns values directly, and does not require break statements.
 
@@ -259,7 +259,7 @@ echo $message; // Output: OK
 ```
 ## Looping Statements
 
-### While Loop
+- ### While Loop
 
 Executes a block of code as long as the condition is true.
 
@@ -273,7 +273,7 @@ while ($i <= 5) {
 }
 ```
 
-### For Loop
+- ### For Loop
 
 Executes a block of code a specific number of times.
 
@@ -285,7 +285,7 @@ for ($i = 1; $i <= 5; $i++) {
 }
 ```
 
-### Do-while Loop
+- ### Do-while Loop
 
 Executes a block of code at least once, then repeats as long as the condition is true.
 
@@ -297,7 +297,7 @@ do {
 } while ($i <= 5);
 ```
 
-### Foreach Loop
+- ### Foreach Loop
 
 Iterates over each element in an array.
 
@@ -309,7 +309,7 @@ foreach ($fruits as $fruit) {
 ```
 ## Break and Continue
 
-### break
+- ### break
 Exits the current loop or switch.
 
 ```php
@@ -321,7 +321,7 @@ for ($i = 1; $i <= 5; $i++) {
 }
 ```
 
-### continue
+- ### continue
 Skips the current iteration of a loop and moves to the next.
 
 ```php
@@ -334,7 +334,7 @@ for ($i = 1; $i <= 5; $i++) {
 ```
 ## User Input
 
-### fgets(STDIN)
+- ### fgets(STDIN)
 
 The fgets(STDIN) function is used to read a line of input from the standard input (usually the console or terminal)
 
@@ -355,7 +355,7 @@ echo "Hello, $name!";
 
 ## Arrays
 
-### Indexed Array
+- ### Indexed Array
 An indexed array in PHP is a type of array where values are stored using numerical indices (starting from 0 by default). These arrays are ideal for storing a collection of similar data where the order matters and keys are not required.
 
 ```php
@@ -363,7 +363,7 @@ $fruits = ["Apple", "Banana", "Cherry"];
 echo $fruits[0]; // Output: Apple
 ```
 
-### Associative Array 
+- ### Associative Array 
 
 An associative array in PHP is a type of array that uses named keys (rather than numeric indices) to store and access values. These are particularly useful when you want to store data in key-value pairs, making it easier to work with structured data.
 
@@ -383,7 +383,7 @@ In PHP, require and include are used to include files into your PHP scripts. The
 
 ---
 
-## include
+- ## include
 
 The include statement includes and evaluates the specified file. If the file is not found, it throws a warning but the script continues to execute.
 
@@ -411,7 +411,7 @@ echo "Welcome to my website!"; // This will still execute even if header.php is 
 
 ---
 
-## require
+- ## require
 
 The require statement includes and evaluates the specified file. If the file is not found, it throws a fatal error and stops the script execution.
 
@@ -442,20 +442,20 @@ Functions are blocks of reusable code that perform specific tasks. PHP functions
 
 ## Syntax of Functions:
 
-### Defining a Function:
+- ### Defining a Function:
 ```php
 function greet($name) {
     return "Howdy, $name!\n";
 }
 ```
-### Calling a Function:
+- ### Calling a Function:
 ```php
 echo greet("Robert");
 ```
 
 ## Types of Functions:
 
-### Built-in Functions
+- ### Built-in Functions
 PHP provides a wide range of built-in functions, such as:
 ```php
 strlen(): Get the length of a string.
@@ -463,7 +463,7 @@ array_merge(): Merge arrays.
 date(): Get the current date/time.
 ```
 
-###  User-Defined Functions
+- ###  User-Defined Functions
 These are custom functions created by developers to perform specific tasks.
 ```php
 function greet($name) {
@@ -475,7 +475,7 @@ echo greet("John"); // Output: Hello, John!
 
 ## Function Parameters
 
-###  Default Parameters
+- ###  Default Parameters
 Functions can have default values for parameters.
 ```
 function greet($name = "Guest") {
@@ -489,7 +489,7 @@ echo greet(); // Output: Hello, Guest!
 
 PHP allows specifying the types of function parameters and return values to ensure type safety.
 
-  ### - Parameter Type Declarations:
+- ### - Parameter Type Declarations:
 ```php
 function add(int $a, int $b): int {
     return $a + $b;
@@ -498,7 +498,7 @@ function add(int $a, int $b): int {
 echo add(2, 3); // Output: 5
 ```
 
-### Return Type Declaration:
+- ### Return Type Declaration:
 
 ```php
 function getGreeting(): string {
