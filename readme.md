@@ -111,7 +111,7 @@ $is_logged_in = true;
 
 ## Compound Data Types
 
-### Array
+- ### Array
 
 Represents a collection of values, indexed or associative.
 
