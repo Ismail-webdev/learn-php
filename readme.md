@@ -489,7 +489,7 @@ echo greet(); // Output: Hello, Guest!
 
 PHP allows specifying the types of function parameters and return values to ensure type safety.
 
-### Parameter Type Declarations:
+  ### - Parameter Type Declarations:
 ```php
 function add(int $a, int $b): int {
     return $a + $b;
