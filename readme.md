@@ -536,7 +536,8 @@ Variadic functions in PHP allow a function to accept a variable number of argume
 
 ----
 - ### How Variadic Functions Work:
-####   The ... Operator:
+  
+####  The ... Operator:
   It collects multiple arguments passed to a function into an array.
   
   ##### Syntax:
@@ -549,3 +550,17 @@ function myFunction(...$args) {
 ##### Features:
 - Arguments can be of any type (int, string, object, etc.).
 - The collected arguments are accessible as an indexed array.
+
+Examples
+
+```php
+function sum(...$numbers) {
+    $total = 0;
+    foreach ($numbers as $number) {
+        $total += $number;
+    }
+    return $total;
+}
+
+echo sum(1, 2, 3, 4); // Output: 10
+```
