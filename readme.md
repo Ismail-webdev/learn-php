@@ -535,17 +535,17 @@ echo $result; // Outputs: 15
 Variadic functions in PHP allow a function to accept a variable number of arguments. This is useful when the number of inputs to a function isn't fixed. Starting from PHP 5.6, variadic functions are implemented using the ... operator (also known as the splat operator).
 
 ----
-- ### How Variadic Functions Work
-   -- #### The ... Operator:
+- ### How Variadic Functions Work:
+####   The ... Operator:
   It collects multiple arguments passed to a function into an array.
   
- --  #### Syntax:
+  ##### Syntax:
   ```php
 function myFunction(...$args) {
     // $args will be an array
 }
   ```
 
---  #### Features:
+##### Features:
 - Arguments can be of any type (int, string, object, etc.).
 - The collected arguments are accessible as an indexed array.
