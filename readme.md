@@ -599,3 +599,52 @@ displayNames(...$namesArray);
 // Charlie
 
 ```
+
+## Anonymous Functions (Closures)
+
+Anonymous functions, also known as closures, are functions without names. They're often used as callbacks, assigned to variables, or passed as arguments to other functions. In PHP, anonymous functions are implemented using the function keyword, and they can also capture variables from their surrounding scope.
+
+### Basic Syntax
+
+```php
+$greet = function($name) {
+    return "Hello, $name!";
+};
+
+echo $greet("Ali"); // Output: Hello, Ali!
+```
+
+### Key Features
+
+#### 1. Assigning to Variables
+Anonymous functions can be stored in variables for later use.
+
+```php
+$multiply = function($a, $b) {
+    return $a * $b;
+};
+
+echo $multiply(5, 3); // Output: 15
+```
+
+#### 2. Passing as Callbacks
+They are commonly used as arguments to functions like array_map or array_filter.
+```php
+$numbers = [1, 2, 3, 4, 5];
+$squared = array_map(function($n) {
+    return $n * $n;
+}, $numbers);
+
+print_r($squared); // Output: [1, 4, 9, 16, 25]
+```
+
+#### 3. Accessing Variables from Outer Scope
+Anonymous functions can use variables from their parent scope using the use keyword.
+```php
+$factor = 3;
+$multiply = function($num) use ($factor) {
+    return $num * $factor;
+};
+
+echo $multiply(5); // Output: 15
+```
