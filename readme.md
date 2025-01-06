@@ -10,8 +10,10 @@
 6. [Control Structures](#control-structures)
 7. [User Input](#user-input)
 8. [Arrays](#arrays)
-9.  [Include/Require](#include/require)
-10.  [Functions](#functions)
+9. [Include/Require](#include/require)
+10. [Functions](#functions)
+    11 [Reference](#reference)
+
 ---
 
 # Introduction to PHP
@@ -222,11 +224,13 @@ echo "B grade";
 echo "C grade";
 }
 ```
+
 - ### switch Statement
 
 Selects one block of code to execute from many options.
 
 Example:
+
 ```php
 $day = "Monday";
 switch ($day) {
@@ -257,6 +261,7 @@ $message = match ($status) {
 
 echo $message; // Output: OK
 ```
+
 ## Looping Statements
 
 - ### While Loop
@@ -307,10 +312,11 @@ foreach ($fruits as $fruit) {
     echo $fruit;
 }
 ```
+
 ## Break and Continue
 
 - ### break
-Exits the current loop or switch.
+  Exits the current loop or switch.
 
 ```php
 for ($i = 1; $i <= 5; $i++) {
@@ -322,7 +328,7 @@ for ($i = 1; $i <= 5; $i++) {
 ```
 
 - ### continue
-Skips the current iteration of a loop and moves to the next.
+  Skips the current iteration of a loop and moves to the next.
 
 ```php
 for ($i = 1; $i <= 5; $i++) {
@@ -332,6 +338,7 @@ for ($i = 1; $i <= 5; $i++) {
     echo $i;
 }
 ```
+
 ## User Input
 
 - ### fgets(STDIN)
@@ -356,14 +363,14 @@ echo "Hello, $name!";
 ## Arrays
 
 - ### Indexed Array
-An indexed array in PHP is a type of array where values are stored using numerical indices (starting from 0 by default). These arrays are ideal for storing a collection of similar data where the order matters and keys are not required.
+  An indexed array in PHP is a type of array where values are stored using numerical indices (starting from 0 by default). These arrays are ideal for storing a collection of similar data where the order matters and keys are not required.
 
 ```php
 $fruits = ["Apple", "Banana", "Cherry"];
 echo $fruits[0]; // Output: Apple
 ```
 
-- ### Associative Array 
+- ### Associative Array
 
 An associative array in PHP is a type of array that uses named keys (rather than numeric indices) to store and access values. These are particularly useful when you want to store data in key-value pairs, making it easier to work with structured data.
 
@@ -380,7 +387,6 @@ echo $student["name"]; // Output: John Doe
 
 In PHP, require and include are used to include files into your PHP scripts. They allow you to reuse code, such as headers, footers, database connections, or shared functions, across multiple files. Here's a detailed explanation of both:
 
-
 ---
 
 - ### include
@@ -388,15 +394,16 @@ In PHP, require and include are used to include files into your PHP scripts. The
 The include statement includes and evaluates the specified file. If the file is not found, it throws a warning but the script continues to execute.
 
 Syntax:
+
 ```php
 include 'filename.php';
 ```
+
 Use Cases:
 
 Ideal when the file being included is optional.
 
 Use when the rest of the script can work even if the file is missing.
-
 
 Behavior:
 
@@ -416,6 +423,7 @@ echo "Welcome to my website!"; // This will still execute even if header.php is 
 The require statement includes and evaluates the specified file. If the file is not found, it throws a fatal error and stops the script execution.
 
 Syntax:
+
 ```php
 require 'filename.php';
 ```
@@ -426,16 +434,17 @@ Ideal when the file being included is critical for the application to function.
 
 Use when the script cannot continue without the file.
 
-
 Behavior:
 
 Generates a fatal error (E_COMPILE_ERROR) if the file is missing, halting script execution.
 
 Example:
+
 ```php
 require 'config.php'; // Includes the configuration file
 echo "This will not execute if config.php is missing.";
 ```
+
 # Functions
 
 Functions are blocks of reusable code that perform specific tasks. PHP functions can accept parameters and return values. They can be classified into built-in functions and user-defined functions.
@@ -443,12 +452,15 @@ Functions are blocks of reusable code that perform specific tasks. PHP functions
 ## Syntax of Functions:
 
 - ### Defining a Function:
+
 ```php
 function greet($name) {
     return "Howdy, $name!\n";
 }
 ```
+
 - ### Calling a Function:
+
 ```php
 echo greet("Robert");
 ```
@@ -456,15 +468,17 @@ echo greet("Robert");
 ## Types of Functions:
 
 - ### Built-in Functions
-PHP provides a wide range of built-in functions, such as:
+  PHP provides a wide range of built-in functions, such as:
+
 ```php
 strlen(): Get the length of a string.
 array_merge(): Merge arrays.
 date(): Get the current date/time.
 ```
 
-- ###  User-Defined Functions
-These are custom functions created by developers to perform specific tasks.
+- ### User-Defined Functions
+  These are custom functions created by developers to perform specific tasks.
+
 ```php
 function greet($name) {
     return "Hello, $name!";
@@ -475,8 +489,9 @@ echo greet("John"); // Output: Hello, John!
 
 ## Function Parameters
 
-- ###  Default Parameters
-Functions can have default values for parameters.
+- ### Default Parameters
+  Functions can have default values for parameters.
+
 ```
 function greet($name = "Guest") {
     return "Hello, $name!";
@@ -490,6 +505,7 @@ echo greet(); // Output: Hello, Guest!
 PHP allows specifying the types of function parameters and return values to ensure type safety.
 
 - ### Parameter Type Declarations:
+
 ```php
 function add(int $a, int $b): int {
     return $a + $b;
@@ -521,8 +537,10 @@ function multiply(int $a, int $b): int {
 
 echo multiply(3, "4"); // Error in strict mode
 ```
+
 - 💡 **Note:**
   Strict mode applies only to function/method arguments and return types. Operations like arithmetic or comparisons are not affected by strict mode:
+
 ```php
 <?php
 declare(strict_types=1);
@@ -530,24 +548,29 @@ declare(strict_types=1);
 $result = "5" + 10; // Allowed: PHP still coerces string to int in operations
 echo $result; // Outputs: 15
 ```
+
 ## Variadic Functions Arguments:
 
 Variadic functions in PHP allow a function to accept a variable number of arguments. This is useful when the number of inputs to a function isn't fixed. Starting from PHP 5.6, variadic functions are implemented using the ... operator (also known as the splat operator).
 
-----
+---
+
 - ### How Variadic Functions Work:
-  
-####  The ```...``` Operator:
-  It collects multiple arguments passed to a function into an array.
-  
-  ##### Syntax:
-  ```php
+
+#### The `...` Operator:
+
+It collects multiple arguments passed to a function into an array.
+
+##### Syntax:
+
+```php
 function myFunction(...$args) {
-    // $args will be an array
+  // $args will be an array
 }
-  ```
+```
 
 ##### Features:
+
 - Arguments can be of any type (int, string, object, etc.).
 - The collected arguments are accessible as an indexed array.
 
@@ -564,7 +587,9 @@ function sum(...$numbers) {
 
 echo sum(1, 2, 3, 4); // Output: 10
 ```
+
 ### Usage with Other Parameters:
+
 You can mix variadic arguments with regular parameters, but the variadic parameter must always come last.
 
 ```php
@@ -581,8 +606,10 @@ greet('Hello', 'John', 'Jane', 'Doe');
 // Hello, Doe!
 
 ```
+
 ### Unpacking Arguments into Variadic Functions:
-The ```...``` operator can also unpack an array into separate arguments when calling a variadic function.
+
+The `...` operator can also unpack an array into separate arguments when calling a variadic function.
 
 ```php
 function displayNames(...$names) {
@@ -617,6 +644,7 @@ echo $greet("Ali"); // Output: Hello, Ali!
 ### Key Features
 
 #### 1. Assigning to Variables
+
 Anonymous functions can be stored in variables for later use.
 
 ```php
@@ -628,7 +656,9 @@ echo $multiply(5, 3); // Output: 15
 ```
 
 #### 2. Passing as Callbacks
+
 They are commonly used as arguments to functions like array_map or array_filter.
+
 ```php
 $numbers = [1, 2, 3, 4, 5];
 $squared = array_map(function($n) {
@@ -639,7 +669,9 @@ print_r($squared); // Output: [1, 4, 9, 16, 25]
 ```
 
 #### 3. Accessing Variables from Outer Scope
+
 Anonymous functions can use variables from their parent scope using the use keyword.
+
 ```php
 $factor = 3;
 $multiply = function($num) use ($factor) {
@@ -647,4 +679,41 @@ $multiply = function($num) use ($factor) {
 };
 
 echo $multiply(5); // Output: 15
+```
+
+# Reference
+
+References allow you to manipulate variables through their references rather than directly. This affects how variables are passed between functions, manipulated, and stored.
+
+## Passing Variables
+
+- ### Pass by Value (Default):
+  - When you assign or pass a variable to a function, PHP creates a copy of the variable.
+  - Changes to the copy do not affect the original variable.
+
+```php
+function increment($num) {
+    $num++;
+}
+
+$value = 10;
+increment($value);
+echo $value; // Output: 10
+```
+
+- ### Pass by Reference:
+
+  - Instead of copying the value, PHP passes the variable's reference. Changes made to the parameter inside the function affect the original variable.
+
+  - use the & symbol to pass by reference.
+
+```php
+function increment(&$num) {
+    $num++;
+}
+
+$value = 10;
+increment($value);
+echo $value; // Output: 11
+
 ```
