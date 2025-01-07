@@ -12,7 +12,7 @@
 8. [Arrays](#arrays)
 9. [Include/Require](#include/require)
 10. [Functions](#functions)
-11. [Reference](#reference)
+11. [References](#reference)
 
 ---
 
